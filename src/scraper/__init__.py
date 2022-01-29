@@ -279,7 +279,7 @@ class LimipediaScraper:
             self.base_url + link["href"] for link in wpn_scraper.select("a")[:5]
         ]
 
-        for page_link in page_links[:1]:
+        for page_link in page_links:
             items_list_page = self.as_soup(page_link)
             for idx, anchor in enumerate(items_list_page.select("a")[7:]):
                 details_page = self.as_soup(self.base_url + anchor["href"])

@@ -1,6 +1,6 @@
 specs.yaml
-src/data/*
-!src/data/.gitkeep 
+# src/data/*
+# !src/data/.gitkeep 
 **/query.test.py
 
 

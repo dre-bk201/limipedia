@@ -14,7 +14,7 @@ import models.lib.defgears as defgears  # type: ignore
 import models.lib.abilities as abilities  # type: ignore
 
 
-# Add id to models and ids to reforge info
+# TODO: Collision in database with Yuletide Dress, Celestial Clothing, Royal Barrette -> solution append gear_type to gear_name and encode for doc_id
 
 class LimipediaScraper:
     base_url: str = "http://jam-capture-unisonleague-ww.ateamid.com"

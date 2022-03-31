@@ -9,6 +9,8 @@ from .utils import process_query_params
 from models import monsters as mon
 from models import weapons as wpn
 from models import defgears as gear
+from models import abilities as ability
+
 from scraper import LimipediaScraper
 
 import models.lib.monsters as mon
@@ -78,6 +80,20 @@ async def defgears_query(
         limit, fields, search, skill_name,
         skill_effect, db_name="src/data/defgears.json"
     )
+
+
+# @app.get("/ability")
+# async def abilities_query(
+#         sort: Optional[str] = None,
+#         offset: Optional[int] = None,
+#         limit: Optional[int] = None,
+#         search: Optional[str] = None,  skill_name: Optional[str] = None,
+# ):
+#     return process_query_params(
+#         ability.Ability,  sort, offset,
+#         limit, search, skill_name,
+#         db_name="src/data/abilities.json"
+#     )
 
 
 @app.get("/defgears/{id}")
